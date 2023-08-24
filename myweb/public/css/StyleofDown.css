@@ -1,0 +1,22 @@
+#all{
+	display:flex;   				/*设置父容器为flex*/
+	flex-direction: row;			/*设置弹性盒子的排列方向*/
+	justify-content: center;		/*设置弹性盒子按照交叉轴居中*/
+	justify-content:space-evenly;
+	position:relative;			/*相对位置*/
+	top:100px;					/*下调100px*/
+
+}
+
+.url{
+	width:40vw;
+	word-break: break-all; 
+	word-wrap:break-word;
+}
+.tt{
+	width:40vw;
+	word-break: break-all;
+	 word-wrap:break-word;
+
+}
+

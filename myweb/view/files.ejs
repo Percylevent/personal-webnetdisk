@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>下载文件选择</title>
+		<link href="css/StyleofDown.css" rel="stylesheet" />
+		<meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=0.3,maximum-scale=0.3,shrink-to-fit=no">
+	</head>
+	<body>
+		<h1>请选择下载文件：</h1>
+		<div id="all">
+  		<div id='filelist'>
+     			<table  border="1" cellpadding="20" bgcolor="#ffcc00">
+			<caption>文件列表</caption>	
+				<thead>
+    				<tr>
+      				<th>文件预览</th>
+				<th>文件大小</th>
+      				<th>下载</th>
+      				<th>删除</th>
+    				</tr>
+  				</thead>
+
+				<tbody>
+      				<% files.forEach(function(file){ %>
+      				<tr>
+      					<% if([".ppt",".pptx",".doc",".docx"].includes(file.ext)) {%>
+					<%# 这里预览的url必须src=域名，当域名更改后这里也要改 %>
+						<td class="url"><a href="https://view.officeapps.live.com/op/view.aspx?src=http://www.sezpc.fit<%= file.path %>" target="_blank"><%= file.name %></a></td>
+					<%} else {%>
+						<td class="url"><a href="<%= file.path %>" target="_blank"><%= file.name %></a></td>
+					<%}%>
+					<td> <%= file.size %> </td>	
+					<td><button type="button" class="bt1" onclick="download('<%= file.name %>')" >下载</button></td>
+      					<td ><button type="button" class="bt2" onclick="delet('<%= file.name %>')" >删除</button></td>
+
+				</tr>
+      				<%})%>
+				</tbody>
+    			</table>
+		</div>
+		
+
+		<div id="textlist">
+		<table  border="1" cellpadding="20" bgcolor="#66ffcc">
+		<caption>文本区域</caption>
+
+			<tbody>		
+				<% texts.forEach(function(t){ %>
+					<tr>
+					<td><p class="tt"><%= t %></p></td>
+				
+					</tr>
+				<%})%>
+			</tbody>
+		</table>
+		</div>
+		
+	
+		</div>
+		<script src="js/down.js" type="text/javascript" > </script>
+  	</body>
+</html>

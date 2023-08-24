@@ -1,0 +1,47 @@
+#div_head{
+	display:flex;   				/*设置父容器为flex*/
+	flex-direction: column;			/*设置弹性盒子的排列方向*/
+	align-items: center;			/*设置弹性盒子按照交叉轴居中*/
+	background-color:#2ecc71;		
+	color: red;
+	font-size: 30px;
+	
+	#p_1{
+		color:black;
+		}
+}
+header{
+		font-size:50px;
+}
+
+
+
+#div_button{
+	display:flex;   				/*设置父容器为flex*/
+	flex-direction: row;			/*设置弹性盒子的排列方向*/
+	justify-content: center;		/*设置弹性盒子按照交叉轴居中*/
+	justify-content:space-evenly;
+	position:relative;			/*相对位置*/
+	top:100px;					/*下调100px*/
+	#upload{
+		width:150px;
+		height:70px;
+		font-size:20px;
+		
+		
+		}
+	#download{
+		width:150px;
+		font-size:20px;
+		}
+}
+
+#upload:hover{
+		background:red;
+
+}
+#download:hover{
+		background:blue;
+}
+
+
