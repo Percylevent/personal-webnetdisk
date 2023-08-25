@@ -19,11 +19,16 @@
 
 -------文件下载：模拟前端<a>标签的点击过程
 
-具体的实现方法请看代码：
+具体的实现方法请看代码。
 
-文件目录：
+项目页面：
 
-
+```mermaid
+graph TD;
+    login-->choose;
+    choose-->upload(up);
+    choose-->download(down);
+```
 
 
 
